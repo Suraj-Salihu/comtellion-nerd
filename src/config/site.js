@@ -2,14 +2,19 @@ export const brand = {
   name: 'Comtellion Services',
   portalName: 'Comtellion NERD Portal',
   shortName: 'Comtellion',
-  tagline: 'Digital registration support for educational services',
+  tagline: 'Your trusted partner for essential services in Nigeria',
+  colors: {
+    blue: '#1246a0',
+    teal: '#1b7d80',
+    gold: '#e8b323',
+  },
 };
 
 export const contactInfo = {
-  email: 'support@comtellion.com',
-  phone: '+234 (000) 000-0000',
-  whatsapp: '+234 800 000 0000',
-  address: 'Lagos, Nigeria',
+  email: 'comtellion@gmail.com',
+  phone: '+234 803 636 4588',
+  whatsapp: '+2348036364588',
+  address: 'Shop 4 behind Post NCE/Sandwich Office, Park in Choba Campus, Uniport',
 };
 
 export const publicNavItems = [

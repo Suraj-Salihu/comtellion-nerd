@@ -9,11 +9,12 @@ export default function PublicNavbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-sm font-bold text-white">C</div>
-          <div>
-            <div className="text-lg font-bold tracking-tight text-slate-900">{brand.shortName}</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500">Portal</div>
+        <Link to="/" className="flex items-center gap-3" aria-label={`${brand.name} NERD Portal home`}>
+          <div className="leading-tight">
+            <div className="text-lg font-extrabold text-[#14345f]">
+              {brand.shortName} <span className="italic text-brand-gold">Services</span>
+            </div>
+            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-teal">NERD Registration Portal</div>
           </div>
         </Link>
 
@@ -23,7 +24,7 @@ export default function PublicNavbar() {
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
-                `text-sm font-medium transition ${isActive ? 'text-indigo-700' : 'text-slate-600 hover:text-slate-900'}`
+                `text-sm font-medium transition ${isActive ? 'text-indigo-700' : 'text-slate-600 hover:text-indigo-700'}`
               }
             >
               {item.label}
@@ -35,7 +36,7 @@ export default function PublicNavbar() {
           <Link to="/login" className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-slate-300">
             Login
           </Link>
-          <Link to="/register" className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-800">
+          <Link to="/register" className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">
             Start Registration
           </Link>
         </div>

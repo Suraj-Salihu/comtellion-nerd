@@ -7,10 +7,9 @@ export default function PublicFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="mb-4 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-sm font-bold text-slate-900">C</div>
             <div>
-              <div className="text-lg font-bold text-white">{brand.shortName}</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-slate-400">Portal</div>
+              <div className="text-lg font-bold text-white">{brand.name}</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-slate-400">NERD Registration Portal</div>
             </div>
           </div>
           <p className="text-sm text-slate-400">{brand.tagline}</p>

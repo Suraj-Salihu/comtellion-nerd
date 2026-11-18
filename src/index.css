@@ -1,8 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
+@theme {
+  --color-indigo-50: #eef4ff;
+  --color-indigo-100: #dce8ff;
+  --color-indigo-200: #bed3ff;
+  --color-indigo-300: #91b4ff;
+  --color-indigo-400: #5e8ff0;
+  --color-indigo-500: #2864ca;
+  --color-indigo-600: #1246a0;
+  --color-indigo-700: #103b82;
+  --color-indigo-800: #0c2f68;
+  --color-indigo-900: #09234d;
+  --color-brand-teal: #1b7d80;
+  --color-brand-gold: #e8b323;
+}
+
 :root {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #0f172a;
@@ -55,4 +70,10 @@ h2,
 h3,
 p {
   margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
 }

@@ -1,4 +1,13 @@
-export default function FormInput({ label, type = 'text', name, value, onChange, placeholder, required = false }) {
+export default function FormInput({
+  label,
+  type = 'text',
+  name,
+  value,
+  onChange,
+  placeholder,
+  required = false,
+  ...inputProps
+}) {
   return (
     <label className="block text-sm font-medium text-slate-700">
       <span className="mb-1.5 flex items-center gap-1">
@@ -11,6 +20,8 @@ export default function FormInput({ label, type = 'text', name, value, onChange,
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        required={required}
+        {...inputProps}
         className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm outline-none transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
       />
     </label>

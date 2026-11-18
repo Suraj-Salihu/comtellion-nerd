@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck, BookOpen, FileCheck2, ShieldCheck, Users } from 'lucide-react';
+import { ArrowRight, BadgeCheck, BookOpen, ShieldCheck, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { faqItems, serviceCards, steps } from '../../data/mockData';
 import { contactInfo } from '../../config/site';
@@ -16,10 +16,10 @@ export default function HomePage() {
               Your Educational Registration, Made Easier.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-slate-600">
-              Complete your registration application online, submit your required documents, make payment and conveniently monitor your application from anywhere.
+              Comtellion Services assists customers with NERD registration, academic records upload, verification and clearance, and clearance slip issuance.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link to="/register" className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
+              <Link to="/register" className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700">
                 Start Registration
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -29,53 +29,19 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-5 shadow-lg shadow-slate-200/70">
-            <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <div className="mb-5 flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-slate-500">Application overview</p>
-                  <h2 className="mt-1 text-2xl font-bold text-slate-900">Registration status</h2>
-                </div>
-                <div className="rounded-xl bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700">Live demo</div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-slate-500">Application ID</span>
-                    <span className="font-semibold text-slate-800">CT-202611-1042</span>
-                  </div>
-                  <div className="mt-4 flex items-center justify-between text-sm">
-                    <span className="text-slate-500">Status</span>
-                    <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700">Under Review</span>
-                  </div>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="mb-3 flex items-center justify-between text-sm">
-                    <span className="text-slate-500">Progress</span>
-                    <span className="font-medium text-slate-700">68%</span>
-                  </div>
-                  <div className="h-2.5 overflow-hidden rounded-full bg-slate-200">
-                    <div className="h-full w-[68%] rounded-full bg-gradient-to-r from-indigo-500 to-sky-500" />
-                  </div>
-                </div>
-
-                <div className="grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl bg-indigo-50 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-indigo-600">Docs</p>
-                    <p className="mt-2 text-xl font-bold text-slate-900">4/5</p>
-                  </div>
-                  <div className="rounded-2xl bg-emerald-50 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-emerald-600">Paid</p>
-                    <p className="mt-2 text-xl font-bold text-slate-900">₦24k</p>
-                  </div>
-                  <div className="rounded-2xl bg-sky-50 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-sky-600">Support</p>
-                    <p className="mt-2 text-xl font-bold text-slate-900">24/7</p>
-                  </div>
-                </div>
-              </div>
+          <div className="relative overflow-hidden rounded-3xl bg-slate-900 p-7 text-white shadow-lg sm:p-9">
+            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-indigo-800/50 to-transparent" />
+            <div className="relative">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">NERD services</p>
+              <h2 className="mt-3 max-w-md text-3xl font-bold">Support at each stage of the process</h2>
+              <ul className="mt-7 space-y-4">
+                {['Registration', 'Academic records upload', 'Verification and clearance', 'Clearance slip issuance'].map((service, index) => (
+                  <li key={service} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-300 text-sm font-bold text-slate-900">{index + 1}</span>
+                    <span className="font-medium text-slate-100">{service}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -92,17 +58,17 @@ export default function HomePage() {
             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <BookOpen className="h-10 w-10 rounded-xl bg-indigo-50 p-2 text-indigo-700" />
               <h3 className="mt-5 text-xl font-semibold text-slate-900">Digital-first registration</h3>
-              <p className="mt-2 text-slate-600">Manage applications from submission to tracking with a clean digital workflow designed for efficiency.</p>
+              <p className="mt-2 text-slate-600">Prepare the registration details provided by Comtellion and follow up on the processing steps.</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <ShieldCheck className="h-10 w-10 rounded-xl bg-emerald-50 p-2 text-emerald-700" />
               <h3 className="mt-5 text-xl font-semibold text-slate-900">Trusted process flow</h3>
-              <p className="mt-2 text-slate-600">From account creation to document review and payment confirmation, the path is transparent and organised.</p>
+              <p className="mt-2 text-slate-600">Keep the NERD registration information and the supplied academic documents together for processing.</p>
             </div>
             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <Users className="h-10 w-10 rounded-xl bg-sky-50 p-2 text-sky-700" />
               <h3 className="mt-5 text-xl font-semibold text-slate-900">Customer-first experience</h3>
-              <p className="mt-2 text-slate-600">Access support, check updates, and download completed slips without the friction of manual processes.</p>
+              <p className="mt-2 text-slate-600">Contact Comtellion directly for questions about requirements, processing, and clearance slip availability.</p>
             </div>
           </div>
         </div>
@@ -152,7 +118,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Available services</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">Designed for NERD today and future service expansion</h2>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">NERD services offered by Comtellion</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {serviceCards.map((card) => (
@@ -187,12 +153,12 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm lg:flex lg:items-center lg:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Contact</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Comtellion Services · Uniport</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">Need help with your application?</h2>
             </div>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:mt-0">
               <a href={`mailto:${contactInfo.email}`} className="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 hover:border-slate-300">{contactInfo.email}</a>
-              <a href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, '')}`} className="rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600">WhatsApp support</a>
+              <a href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, '')}`} className="rounded-md bg-brand-teal px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90">WhatsApp support</a>
             </div>
           </div>
         </div>

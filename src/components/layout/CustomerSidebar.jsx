@@ -16,14 +16,14 @@ const iconMap = {
 
 export default function CustomerSidebar() {
   return (
-    <aside className="w-full border-r border-slate-200 bg-slate-50 lg:w-72">
-      <div className="space-y-6 p-5">
-        <div className="rounded-2xl bg-slate-900 p-4 text-white">
+    <aside className="w-full border-b border-slate-200 bg-slate-50 lg:w-72 lg:border-b-0 lg:border-r">
+      <div className="flex flex-col gap-3 p-4 lg:space-y-6 lg:p-5">
+        <div className="rounded-xl bg-slate-900 p-3 text-white lg:rounded-2xl lg:p-4">
           <p className="text-xs uppercase tracking-[0.2em] text-slate-300">Customer Portal</p>
-          <h2 className="mt-2 text-xl font-bold">Welcome back</h2>
+          <h2 className="mt-1 text-lg font-bold lg:mt-2 lg:text-xl">Welcome back</h2>
         </div>
 
-        <nav className="space-y-1">
+        <nav aria-label="Customer navigation" className="flex gap-1 overflow-x-auto pb-1 lg:block lg:space-y-1 lg:overflow-visible lg:pb-0">
           {customerNavItems.map((item) => {
             const Icon = iconMap[item.label] || MessageSquareText;
             return (
@@ -31,7 +31,7 @@ export default function CustomerSidebar() {
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition ${
+                  `flex shrink-0 items-center gap-2 whitespace-nowrap rounded-lg px-3 py-2.5 text-sm font-medium transition lg:w-full lg:gap-3 lg:rounded-xl ${
                     isActive ? 'bg-indigo-100 text-indigo-700' : 'text-slate-600 hover:bg-slate-200 hover:text-slate-800'
                   }`
                 }

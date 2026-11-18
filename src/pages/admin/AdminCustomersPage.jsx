@@ -1,5 +1,4 @@
 import DashboardHeader from '../../components/layout/DashboardHeader';
-import { staffMembers } from '../../data/mockData';
 
 export default function AdminCustomersPage() {
   return (

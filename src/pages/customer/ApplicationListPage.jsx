@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Edit3, Eye, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import DashboardHeader from '../../components/layout/DashboardHeader';
 import StatusBadge from '../../components/common/StatusBadge';
 import { customerApplications } from '../../data/mockData';
@@ -53,7 +54,7 @@ export default function ApplicationListPage() {
                   <td className="py-4 pr-4"><StatusBadge status={item.status} /></td>
                   <td className="py-4 pr-4">
                     <div className="flex items-center gap-3">
-                      <button className="flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-1.5 text-indigo-700"><Eye className="h-3.5 w-3.5" /> View</button>
+                      <Link to={`/customer/applications/${item.id}`} className="flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-1.5 text-indigo-700"><Eye className="h-3.5 w-3.5" /> View</Link>
                       <button className="flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-1.5 text-slate-700"><Edit3 className="h-3.5 w-3.5" /> Edit</button>
                     </div>
                   </td>

@@ -14,7 +14,7 @@ import RegisterPage from '../pages/auth/RegisterPage';
 import ForgotPasswordPage from '../pages/auth/ForgotPasswordPage';
 import ResetPasswordPage from '../pages/auth/ResetPasswordPage';
 import CustomerDashboardPage from '../pages/customer/CustomerDashboardPage';
-import NewApplicationPage from '../pages/customer/NewApplicationPage';
+import NewApplicationPage from '../pages/customer/NerdApplicationPage';
 import ApplicationListPage from '../pages/customer/ApplicationListPage';
 import ApplicationDetailPage from '../pages/customer/ApplicationDetailPage';
 import PaymentsPage from '../pages/customer/PaymentsPage';

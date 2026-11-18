@@ -1,40 +1,40 @@
 export const faqItems = [
   {
-    question: 'What is the NERD registration service?',
+    question: 'What NERD services does Comtellion provide?',
     answer:
-      'The Comtellion NERD portal is a digital registration support platform that helps customers complete and track their educational registration applications online.',
+      'Comtellion lists NERD registration, academic records upload, verification and clearance, and clearance slip issuance among its services.',
   },
   {
-    question: 'Can I upload supporting documents online?',
+    question: 'Which documents are listed for this registration?',
     answer:
-      'Yes. Customers can upload required documents through the portal and monitor document review status from their dashboard.',
+      'The checklist supplied by Comtellion includes a passport photo, means of ID (NIN), project certification page or degree certificate, and the full project work in PDF or Word format.',
   },
   {
-    question: 'How do I track my application?',
+    question: 'How do I send my registration details to Comtellion?',
     answer:
-      'Use the application tracking page and enter your reference number to review your current application status and progress.',
+      'The details supplied direct customers to Comtellion via WhatsApp at +234 803 636 4588 and documents to comtellion@gmail.com. Online submission and tracking in this portal are demo-only until connected to a backend.',
   },
   {
-    question: 'Do I have to pay before submitting?',
+    question: 'Is this the official NERD portal?',
     answer:
-      'The portal supports a mock payment flow for demo purposes. Customers can pay after completing their application details and documents.',
+      'No. This is Comtellion Services’ customer registration support portal. Comtellion is not the owner or operator of the official NERD platform.',
   },
 ];
 
 export const steps = [
-  'Create an account',
-  'Complete your application',
-  'Upload required documents',
-  'Make payment',
-  'Wait for review',
-  'Download your slip',
+  'Create a customer account',
+  'Complete the NERD registration details',
+  'Prepare the listed supporting documents',
+  'Send the details to Comtellion for processing',
+  'Follow up with Comtellion about verification and clearance',
+  'Receive the clearance slip when issued',
 ];
 
 export const serviceCards = [
-  { title: 'NERD Registration', status: 'Available', description: 'Digital application support for NERD registrations and document processing.' },
-  { title: 'NYSC Registration', status: 'Coming Soon', description: 'Support for NYSC-related educational registration workflows in future releases.' },
-  { title: 'JAMB Services', status: 'Coming Soon', description: 'Planned educational and application support services for future expansion.' },
-  { title: 'Other Educational Services', status: 'Coming Soon', description: 'Designed to accommodate future educational services beyond the initial rollout.' },
+  { title: 'NERD Registration', status: 'Comtellion service', description: 'Support to prepare and submit customer details for NERD registration.' },
+  { title: 'Academic Records Upload', status: 'Comtellion service', description: 'Assistance with the academic records upload step.' },
+  { title: 'Verification & Clearance', status: 'Comtellion service', description: 'Support through verification and clearance processing.' },
+  { title: 'Clearance Slip Issuance', status: 'Comtellion service', description: 'Follow-up for the clearance slip after it is issued.' },
 ];
 
 export const customerApplications = [
